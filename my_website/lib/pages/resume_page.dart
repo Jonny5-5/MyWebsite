@@ -1,6 +1,7 @@
 import 'package:flutter/widgets.dart';
 
 class MyResumePage extends StatefulWidget {
+  static const String route = '/resume';
   const MyResumePage({super.key});
 
   @override

@@ -1,6 +1,7 @@
 import 'package:flutter/widgets.dart';
 
 class MyProjectsPage extends StatefulWidget {
+  static const String route = '/projects';
   const MyProjectsPage({super.key});
 
   @override

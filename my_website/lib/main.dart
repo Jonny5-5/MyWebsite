@@ -20,8 +20,9 @@ class MyApp extends StatelessWidget {
       home: const MyHomePage(title: 'My Home Page'),
       debugShowCheckedModeBanner: false,
       routes: {
-        '/home_page': (context) => const MyAboutMePage(),
-        '/login_page': (context) => const MyResumePage(),
+        MyAboutMePage.route: (context) => const MyAboutMePage(),
+        MyResumePage.route: (context) => const MyResumePage(),
+        MyProjectsPage.route: (context) => const MyProjectsPage(),
       },
     );
   }
@@ -37,20 +38,11 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   void onPressed(int i) {
     if (i == 0) {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => const MyAboutMePage()),
-      );
+      Navigator.of(context).pushNamed(MyAboutMePage.route);
     } else if (i == 1) {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => const MyResumePage()),
-      );
+      Navigator.of(context).pushNamed(MyResumePage.route);
     } else if (i == 2) {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => const MyProjectsPage()),
-      );
+      Navigator.of(context).pushNamed(MyResumePage.route);
     }
   }
 
